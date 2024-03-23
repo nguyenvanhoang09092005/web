@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google</title>
+    <style>
+      .head {
+        display: flex;
+      }
+      .left {
+        width: 70%;
+      }
+      .right {
+        width: 30%;
+        text-align: right;
+      }
+      a {
+        margin: 10px;
+        text-decoration: none;
+      }
+      .gg {
+        margin-top: 150px;
+      }
+      #text {
+        margin-top: 20px;
+        width: 450px;
+        height: 26px;
+        margin-left: 140px;
+        border-radius: 5px;
+      }
+      .center-right {
+        text-align: center;
+      }
+      .button {
+        margin-top: 10px;
+      }
+      .link {
+        margin-top: 140px;
+      }
+      .note {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <div class="left">
+          Web
+          <a href="https://www.google.com.vn/imghp?hl=vi&authuser=0&ogbl"
+            >Images</a
+          >
+          <a href="https://www.youtube.com/watch?v=W5LPcpIRLzs">Video </a>
+          <a href="https://www.google.com/maps">Maps</a>
+          <a href="#">News</a>
+          <a href="https://shopping.google.com.vn/?pli=1">Shopping</a>
+          <a href="https://www.google.com/intl/vi/gmail/about/">Gmail</a>
+          <a href="https://www.facebook.com/">More</a>
+        </div>
+        <div class="right">
+          <a href="https://www.google.com.vn/?hl=vi">iGoogle</a>
+          <a
+            href="https://www.google.com.vn/preferences?hl=vi&prev=https://www.google.com.vn/?hl%253Dvi"
+            >Search settings</a
+          >
+          <a href="https://www.google.com/account/about/">Sign in</a>
+        </div>
+      </div>
+      <div class="center">
+        <div class="gg">
+          <center>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
+              alt="Google"
+              width="400px"
+            />
+          </center>
+        </div>
+        <div class="text">
+          <center>
+            <table>
+              <tr>
+                <td>
+                  <center><input type="text" id="text" /></center>
+                </td>
+                <td>
+                  <a href="https://www.google.com/advanced_search"
+                    >Advanced Search</a
+                  ><br />
+                  <a href="https://languagetool.org/">Language Tools</a>
+                </td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <center>
+          <div class="button">
+            <button id="Google Search">Google Search</button>
+            <button id="I'm Feeling Lucky">I'm Feeling Lucky</button>
+          </div>
+        </center>
+      </div>
+      <footer>
+        <center>
+          <div class="link">
+            <a
+              href="https://ads.google.com/intl/vi_vn/start/overview-adon/?subid=vn-vi-adon-awa-sch-a-bos!o3~ce3ca3a542531d525883c65cc3102b51~p71910527309~&&msclkid=ce3ca3a542531d525883c65cc3102b51&gclid=ce3ca3a542531d525883c65cc3102b51&gclsrc=3p.ds"
+              >Advertising Programs</a
+            >
+            -
+            <a href="https://www.afkl.biz/s/">Business Solutions</a>
+            -
+            <a href="https://about.google/">About Google</a>
+            -
+            <a href="https://www.google.com.vn/">Go to Google VietNam</a>
+          </div>
+        </center>
+        <center>
+          <div class="note">
+            <span>@2009</span> -<a
+              href="https://privacy.com.br/v2/auth/sign-in?ReturnUrl=%2F"
+              >Privacy</a
+            >
+          </div>
+        </center>
+      </footer>
+    </div>
+    <script>
+      document
+        .getElementById("Google Search")
+        .addEventListener("click", function () {
+          var searchText = document.getElementById("text").value;
+          if (searchText === "") {
+            alert("Google is searching");
+          } else {
+            window.location.href =
+              "https://www.google.com/search?q=" +
+              encodeURIComponent(searchText);
+          }
+        });
+      document
+        .getElementById("I'm Feeling Lucky")
+        .addEventListener("click", function () {
+          alert("I'm feeling lucky!");
+        });
+    </script>
+  </body>
+</html>
